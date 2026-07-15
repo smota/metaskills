@@ -1,101 +1,182 @@
 # metaskills
 
-A repository of reusable skills for building agents, skills, and toolsets that are used inside other projects.
+Installable skills for building better agents and skills in your own projects.
 
-This repository is intentionally **not** a management platform, agent runtime, or standalone AI product. It is a workspace for designing, documenting, testing, and packaging portable development assets that can be copied, referenced, or installed by downstream projects.
+`metaskills` is for adopters who want practical, reusable agent-building workflows without adopting a new platform. Install a skill, use it in your project, and keep the generated assets in your own repo.
 
-## Purpose
+## Quick start
 
-`metaskills` provides shared building blocks for multi-agent development:
+Install a skill with `npx skill` by pointing `SKILL_BASE_URL` at this repository.
 
-- agent instructions and operating guides
-- reusable skill definitions
-- toolset documentation and integration notes
-- asset-owned templates for agent-enabled repositories
-- examples that demonstrate how skills compose inside real projects
+### macOS, Linux, or Git Bash
 
-These assets should help other repositories bootstrap consistent agent behavior without turning this repository into the central place where those projects are managed.
-
-## Repository layout
-
-```text
-.
-├── AGENTS.md              # Workspace guidance for agents working in this repo
-├── CLAUDE.md              # Claude-compatible pointer to AGENTS.md
-├── CODEX.md               # Codex-compatible pointer to AGENTS.md
-├── AGY.md                 # Agy-compatible pointer to AGENTS.md
-├── GEMINI.md              # Gemini-compatible pointer to AGENTS.md
-├── GITHUB_COPILOT.md      # GitHub Copilot-compatible pointer to AGENTS.md
-├── .github/
-│   └── copilot-instructions.md # GitHub Copilot repository instructions pointer
-├── README.md              # Project overview
-├── skills/                # Native reusable skill packages and prompts
-├── agents/                # Native agent role definitions and examples
-├── toolsets/              # Native tooling guides, wrappers, and integration notes
-├── components/            # External repos linked as Git submodules
-├── examples/              # Small examples showing usage in consuming projects
-└── docs/                  # Design notes and conventions
+```bash
+SKILL_BASE_URL=https://github.com/smota/metaskills/tree/main \
+npx skill skills/agent-builder
 ```
 
-Directories may start empty. Add content when there is a reusable skill, agent pattern, toolset, or external component that another project can consume.
+```bash
+SKILL_BASE_URL=https://github.com/smota/metaskills/tree/main \
+npx skill skills/skill-creator
+```
 
-## What belongs here
+### PowerShell
 
-Add material when it is reusable across projects, such as:
+```powershell
+$env:SKILL_BASE_URL = "https://github.com/smota/metaskills/tree/main"
+npx skill skills/agent-builder
+npx skill skills/skill-creator
+```
 
-- a skill that teaches an agent how to perform a repeatable task
-- an agent role definition that can be adapted by another repository
-- documentation for a toolset used by agent workflows
-- external component repositories linked under `components/` as Git submodules
-- repository setup instructions such as `AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `AGY.md`, `GEMINI.md`, GitHub Copilot instructions, or skill manifests
-- templates colocated with the skill, agent, or toolset that owns them
-- examples that show how a consuming project should adopt a skill
+### What gets installed
 
-## What does not belong here
+`npx skill` installs each skill into your current project's `.codebuddy/skills/` directory:
 
-Avoid adding:
+```text
+.codebuddy/skills/agent-builder/
+.codebuddy/skills/skill-creator/
+```
 
-- project-specific backlog, planning, or management state
-- production app code for an AI platform
-- customer data, secrets, credentials, or private operational details
-- one-off instructions that only make sense in a single downstream repository
+Each installed skill is self-contained and includes its own `SKILL.md`, README, templates, checklists, references, and examples.
 
-## Development principles
+## Available skills
 
-1. **Portable first** — write skills so they can be copied or referenced by other projects.
-2. **Tool-neutral guidance** — prefer `AGENTS.md` as the canonical agent instruction file; keep tool-specific files as thin pointers.
-3. **Composable assets** — skills, agents, and toolsets should be small enough to combine in downstream repositories.
-4. **Explicit boundaries** — this repo helps build agents and skills; it does not operate them as a platform.
-5. **Safe by default** — never commit secrets or environment-specific credentials.
+### [`agent-builder`](./skills/agent-builder/)
 
-## Included skills
+Build portable agents from a plain-language goal.
 
-- [`agent-builder`](./skills/agent-builder/) — build portable agents from plain-language goals using a simple describe/configure/review/package workflow.
-- [`skill-creator`](./skills/skill-creator/) — create, evaluate, improve, benchmark, and evolve reusable skills with optional learning and telemetry guidance.
+Use it when you want to create an agent, copilot, coding assistant, tool-enabled assistant, or knowledge-focused assistant for another project.
 
-## External components
+What it helps produce:
 
-External repositories that should keep their own Git history, branches, releases, and PR workflow should be added under `components/` as Git submodules.
+```text
+agents/<agent-name>/
+├── README.md
+├── AGENT.md
+├── starter-prompts.md
+├── knowledge-sources.md
+├── tools-actions.md
+└── evals.md
+```
 
-Use this for component repos that need to be developed from this workspace while still allowing contributors to sync, merge, and send PRs to the original upstream repository.
+Key capabilities:
 
-Every component should declare its mode in a sibling `components/<name>.metaskills.md` file:
+- turns a natural-language idea into an agent specification
+- defines name, description, instructions, and boundaries
+- identifies knowledge sources
+- designs tools/actions and safety notes
+- creates starter prompts
+- adds validation and acceptance criteria
+- packages the result for downstream projects
 
-- `reference-only` — pinned prior art or reference material; not imported or run
-- `development-companion` — used for upstream-compatible development and PRs
-- `tool-provider` — scripts, CLIs, schemas, or tests are intentionally called from the submodule
+Try prompts like:
 
-See [`docs/submodules.md`](./docs/submodules.md) for the full workflow.
+```text
+Use the agent-builder skill to design an agent that drafts release notes from GitHub issues and changelog fragments.
+```
 
-## Getting started
+```text
+Create a knowledge-only onboarding agent for this repository.
+```
 
-1. Read [`AGENTS.md`](./AGENTS.md) for workspace conventions.
-2. Add native reusable assets under `skills/`, `agents/`, `toolsets/`, or `examples/`.
-3. Keep templates inside the skill, agent, or toolset that owns them.
-4. Add independently maintained external repositories under `components/` as Git submodules with `.metaskills.md` metadata.
-5. Document each asset with its purpose, expected inputs, expected outputs, and adoption instructions.
-6. Keep downstream-project-specific notes in the downstream project, not here.
+```text
+Design a tool-enabled agent that reviews database migrations before release.
+```
 
-## Multi-agent development
+### [`skill-creator`](./skills/skill-creator/)
 
-This workspace is configured for multi-agent collaboration. `AGENTS.md` is the source of truth for agent behavior. Tool-specific files such as `CLAUDE.md`, `CODEX.md`, `AGY.md`, `GEMINI.md`, `GITHUB_COPILOT.md`, and `.github/copilot-instructions.md` exist for compatibility and point back to `AGENTS.md` so AI coding tools receive the same repository guidance.
+Create, evaluate, improve, benchmark, and evolve reusable skills.
+
+Use it when you want to turn a workflow, prompt, document, transcript, script, or existing sub-agent into an installable skill.
+
+What it helps produce:
+
+```text
+skills/<skill-name>/
+├── SKILL.md
+├── README.md
+├── templates/
+├── checklists/
+├── references/
+└── examples/
+```
+
+Key capabilities:
+
+- creates production-ready skill packages
+- keeps skills efficient with progressive disclosure
+- generates eval specs and pass/fail cases
+- plans improvements from feedback or failed evals
+- benchmarks versions or alternatives
+- supports optional learning logs
+- supports optional privacy-safe telemetry plans
+
+Try prompts like:
+
+```text
+Use the skill-creator skill to turn this support triage workflow into a reusable skill.
+```
+
+```text
+Evaluate this existing skill and suggest improvements with acceptance criteria.
+```
+
+```text
+Create a benchmark plan comparing v1 and v2 of this skill.
+```
+
+## Choosing a skill
+
+| If you want to... | Use |
+| --- | --- |
+| Build an agent for a downstream project | [`agent-builder`](./skills/agent-builder/) |
+| Define an agent's knowledge, tools, and starter prompts | [`agent-builder`](./skills/agent-builder/) |
+| Turn a workflow into an installable skill | [`skill-creator`](./skills/skill-creator/) |
+| Improve or benchmark an existing skill | [`skill-creator`](./skills/skill-creator/) |
+| Add optional learning or telemetry guidance to a skill | [`skill-creator`](./skills/skill-creator/) |
+
+## Verify installation
+
+After installing, check that the skill package exists:
+
+```bash
+find .codebuddy/skills/agent-builder -maxdepth 2 -type f
+find .codebuddy/skills/skill-creator -maxdepth 2 -type f
+```
+
+You should see files such as:
+
+```text
+SKILL.md
+README.md
+templates/
+checklists/
+references/
+examples/
+```
+
+## Use in a downstream project
+
+1. Open the project where you want the skill available.
+2. Run the `npx skill` install command from that project root.
+3. Ask your coding agent to use the installed skill by name.
+4. Keep generated agents or skills in your project repo.
+5. Re-run the install command when you want the latest version.
+
+## What this repo is not
+
+`metaskills` is not a hosted AI platform, agent runtime, management system, or central control plane. It is a small collection of reusable skills and references that help other projects build their own agents and skills.
+
+## More documentation
+
+- [Repository architecture](./docs/repository-architecture.md) — structure, asset ownership, and implementation details.
+- [Component submodule workflow](./docs/submodules.md) — how external inspiration/reference repos are linked.
+
+## Inspirations and references
+
+These skills are inspired by and reference the following projects and capabilities:
+
+- [Microsoft 365 Copilot Agent Builder](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents) — natural-language agent creation, configure/review workflow, knowledge sources, actions, and starter prompts.
+- [FrancyJGLisboa/agent-skill-creator](https://github.com/FrancyJGLisboa/agent-skill-creator) — plain-English workflow-to-skill strategy, validation, security scanning, evals, and cross-platform skill packaging.
+- [Claude Skill Creator](https://claude.com/plugins/skill-creator) — Create, Eval, Improve, and Benchmark lifecycle for skill development.
+- [metaskills/skill-builder](https://github.com/metaskills/skill-builder) — production-ready skill structure, progressive disclosure, and sub-agent-to-skill conversion guidance.

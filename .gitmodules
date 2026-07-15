@@ -1,3 +1,6 @@
 [submodule "components/agent-skill-creator"]
 	path = components/agent-skill-creator
 	url = https://github.com/FrancyJGLisboa/agent-skill-creator.git
+[submodule "components/skill-builder"]
+	path = components/skill-builder
+	url = https://github.com/metaskills/skill-builder.git

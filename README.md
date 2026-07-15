@@ -29,15 +29,16 @@ These assets should help other repositories bootstrap consistent agent behavior 
 ├── .github/
 │   └── copilot-instructions.md # GitHub Copilot repository instructions pointer
 ├── README.md              # Project overview
-├── skills/                # Reusable skill packages and prompts
-├── agents/                # Agent role definitions and examples
-├── toolsets/              # Tooling guides, wrappers, and integration notes
+├── skills/                # Native reusable skill packages and prompts
+├── agents/                # Native agent role definitions and examples
+├── toolsets/              # Native tooling guides, wrappers, and integration notes
+├── components/            # External repos linked as Git submodules
 ├── templates/             # Starter files for downstream projects
 ├── examples/              # Small examples showing usage in consuming projects
 └── docs/                  # Design notes and conventions
 ```
 
-Directories may start empty. Add content when there is a reusable skill, agent pattern, or toolset that another project can consume.
+Directories may start empty. Add content when there is a reusable skill, agent pattern, toolset, or external component that another project can consume.
 
 ## What belongs here
 
@@ -46,6 +47,7 @@ Add material when it is reusable across projects, such as:
 - a skill that teaches an agent how to perform a repeatable task
 - an agent role definition that can be adapted by another repository
 - documentation for a toolset used by agent workflows
+- external component repositories linked under `components/` as Git submodules
 - repository setup templates such as `AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `AGY.md`, `GEMINI.md`, GitHub Copilot instructions, or skill manifests
 - examples that show how a consuming project should adopt a skill
 
@@ -66,12 +68,21 @@ Avoid adding:
 4. **Explicit boundaries** — this repo helps build agents and skills; it does not operate them as a platform.
 5. **Safe by default** — never commit secrets or environment-specific credentials.
 
+## External components
+
+External repositories that should keep their own Git history, branches, releases, and PR workflow should be added under `components/` as Git submodules.
+
+Use this for component repos that need to be developed from this workspace while still allowing contributors to sync, merge, and send PRs to the original upstream repository.
+
+See [`docs/submodules.md`](./docs/submodules.md) for the full workflow.
+
 ## Getting started
 
 1. Read [`AGENTS.md`](./AGENTS.md) for workspace conventions.
-2. Add reusable assets under `skills/`, `agents/`, `toolsets/`, `templates/`, or `examples/`.
-3. Document each asset with its purpose, expected inputs, expected outputs, and adoption instructions.
-4. Keep downstream-project-specific notes in the downstream project, not here.
+2. Add native reusable assets under `skills/`, `agents/`, `toolsets/`, `templates/`, or `examples/`.
+3. Add independently maintained external repositories under `components/` as Git submodules.
+4. Document each asset with its purpose, expected inputs, expected outputs, and adoption instructions.
+5. Keep downstream-project-specific notes in the downstream project, not here.
 
 ## Multi-agent development
 

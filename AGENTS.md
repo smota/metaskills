@@ -14,33 +14,36 @@ Use this repository for multi-agent development in a way that preserves portabil
 
 - Keep shared instructions in `AGENTS.md`.
 - Keep tool-specific instruction files, i.e. `CLAUDE.md`, `CODEX.md`, `AGY.md`, `GEMINI.md`, `GITHUB_COPILOT.md`, and `.github/copilot-instructions.md`, as thin compatibility pointers back to `AGENTS.md`.
-- Make each skill or toolset usable by another project without requiring this repository to run as a service.
+- Make each skill, toolset, or component usable by another project without requiring this repository to run as a service.
+- Put independently maintained external repositories under `components/` as Git submodules.
 - Prefer clear handoff notes, examples, and tests over hidden assumptions.
 - When multiple agents contribute, record durable decisions in docs or the relevant asset README.
 
 ## Expected structure
 
 ```text
-skills/      Reusable skill packages, prompts, procedures, and examples.
-agents/      Agent role definitions, collaboration patterns, and example configurations.
-toolsets/    Tool integration notes, wrappers, schemas, and usage guides.
+skills/      Native reusable skill packages, prompts, procedures, and examples.
+agents/      Native agent role definitions, collaboration patterns, and example configurations.
+toolsets/    Native tool integration notes, wrappers, schemas, and usage guides.
+components/  External repositories linked as Git submodules.
 templates/   Starter files that other projects can copy into their repository.
 examples/    Minimal examples showing how downstream projects consume these assets.
-docs/        Design notes, conventions, and decision records.
+docs/        Design notes, conventions, decision records, and workflow runbooks.
 ```
 
 Create directories as needed. Do not add empty complexity just to satisfy the structure.
 
 ## Contribution standards
 
-When adding a skill, agent, or toolset:
+When adding a skill, agent, toolset, or component:
 
 1. State the purpose and intended downstream use.
 2. Document prerequisites and dependencies.
 3. Include usage examples.
 4. Define inputs, outputs, and success criteria where applicable.
 5. Keep project-specific assumptions out of reusable assets.
-6. Avoid secrets, credentials, private URLs, or environment-specific values.
+6. For external repos, prefer a Git submodule under `components/` instead of copying source.
+7. Avoid secrets, credentials, private URLs, or environment-specific values.
 
 ## Naming conventions
 
@@ -58,7 +61,7 @@ Do not turn this repository into:
 - a centralized AI operations product
 - a place for proprietary customer or production data
 
-If an asset only applies to one repository, keep it in that repository instead.
+If an asset only applies to one repository, keep it in that repository instead. If an asset has its own lifecycle, releases, issues, or PR process, link it as a submodule under `components/`.
 
 ## Agent workflow
 
@@ -68,7 +71,8 @@ Before changing files:
 2. Preserve existing user work.
 3. Prefer small, reviewable changes.
 4. Update documentation when changing conventions.
-5. If adding executable tooling, include the minimal validation command in the relevant README.
+5. When changing a submodule, commit and push inside the submodule first, then update the parent repository pointer.
+6. If adding executable tooling, include the minimal validation command in the relevant README.
 
 After changing files:
 

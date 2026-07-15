@@ -68,6 +68,10 @@ Avoid adding:
 4. **Explicit boundaries** — this repo helps build agents and skills; it does not operate them as a platform.
 5. **Safe by default** — never commit secrets or environment-specific credentials.
 
+## Included skills
+
+- [`agent-builder`](./skills/agent-builder/) — build portable agents from plain-language goals using a simple describe/configure/review/package workflow.
+
 ## External components
 
 External repositories that should keep their own Git history, branches, releases, and PR workflow should be added under `components/` as Git submodules.

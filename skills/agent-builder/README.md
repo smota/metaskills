@@ -43,8 +43,22 @@ agents/<agent-name>/
 - [`references/microsoft-agent-builder-notes.md`](./references/microsoft-agent-builder-notes.md)
 - [`references/agent-skill-creator-notes.md`](./references/agent-skill-creator-notes.md)
 - [`references/output-schema.md`](./references/output-schema.md)
-- Component submodule: [`../../components/agent-skill-creator`](../../components/agent-skill-creator)
+- Component submodule in the source repo: [`../../components/agent-skill-creator`](../../components/agent-skill-creator)
+
+## Included templates
+
+The installable skill package includes its own templates under [`templates/`](./templates/):
+
+- `agent-builder-intake.md`
+- `agent-definition.md`
+- `agent-evals.md`
+- `agent-readme.md`
+- `agent-starter-prompts.md`
+- `agent-tool-actions.md`
+- `agent-validation-checklist.md`
+
+These are duplicated from the repository-level `templates/` directory so package installers such as `npx skill skills/agent-builder` install a complete, self-contained skill.
 
 ## Validation
 
-Use the templates in `../../templates/` and the checklist in `checklists/` to review generated agent packages before committing or sharing them.
+Use the included templates and the checklists in [`checklists/`](./checklists/) to review generated agent packages before committing or sharing them.

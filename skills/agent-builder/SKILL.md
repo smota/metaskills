@@ -79,6 +79,16 @@ skills/<skill-name>/
 └── examples/
 ```
 
+Use this skill's bundled `templates/` directory when creating files:
+
+- `templates/agent-builder-intake.md`
+- `templates/agent-definition.md`
+- `templates/agent-readme.md`
+- `templates/agent-starter-prompts.md`
+- `templates/agent-tool-actions.md`
+- `templates/agent-evals.md`
+- `templates/agent-validation-checklist.md`
+
 ### 5. Follow up
 
 End with:

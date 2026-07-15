@@ -19,5 +19,6 @@ The metadata file declares how this repo uses the submodule:
 Current components:
 
 - [`agent-skill-creator`](./agent-skill-creator) — see [`agent-skill-creator.metaskills.md`](./agent-skill-creator.metaskills.md)
+- [`skill-builder`](./skill-builder) — see [`skill-builder.metaskills.md`](./skill-builder.metaskills.md)
 
 See [`../docs/submodules.md`](../docs/submodules.md) for the full workflow.

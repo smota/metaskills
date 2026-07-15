@@ -71,6 +71,7 @@ Avoid adding:
 ## Included skills
 
 - [`agent-builder`](./skills/agent-builder/) — build portable agents from plain-language goals using a simple describe/configure/review/package workflow.
+- [`skill-creator`](./skills/skill-creator/) — create, evaluate, improve, benchmark, and evolve reusable skills with optional learning and telemetry guidance.
 
 ## External components
 

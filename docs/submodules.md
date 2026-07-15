@@ -13,7 +13,51 @@ Use a submodule for a component when:
 - the component has an independent release or ownership model
 - `metaskills` should reference a known-good commit without absorbing the full source history
 
-Do not use a submodule for small native files that belong directly in `skills/`, `agents/`, `toolsets/`, `templates/`, or `examples/`.
+Do not use a submodule for small native files that belong directly in `skills/`, `agents/`, `toolsets/`, or `examples/`. Templates should live with the skill, agent, or toolset that owns them so installable/reusable assets stay self-contained.
+
+## Component modes
+
+Every submodule should have a companion metadata file named:
+
+```text
+components/<component-name>.metaskills.md
+```
+
+Use one of these modes.
+
+### `reference-only`
+
+Use when the external repo is prior art, documentation, or an inspectable reference. The parent repo pins a known commit, but does not run or import the submodule.
+
+Good for:
+
+- workflow inspiration
+- architecture examples
+- upstream documentation
+- concepts borrowed by a native skill, agent, or toolset
+
+### `development-companion`
+
+Use when contributors are expected to patch the external repo from this workspace and send PRs upstream.
+
+Good for:
+
+- making upstream-compatible changes
+- testing a component in context
+- updating the parent submodule pointer after upstream merges
+
+### `tool-provider`
+
+Use when native assets in this repo intentionally call scripts, CLIs, schemas, or tests from the submodule.
+
+Good for:
+
+- validation scripts
+- code generators
+- test harnesses
+- reusable CLI utilities
+
+This mode creates stronger coupling. Document required commands, failure modes, and whether downstream users must initialize submodules.
 
 ## Add an existing component repository
 
@@ -25,6 +69,34 @@ git push origin main
 ```
 
 This creates or updates `.gitmodules` and records the exact component commit in the parent repository.
+
+Then add component metadata:
+
+```bash
+cat > components/<repo>.metaskills.md <<'EOF'
+# <repo> component
+
+Mode: `reference-only`
+
+Upstream repository: <https://github.com/<org>/<repo>>
+
+Used by:
+
+- <native skill/agent/toolset path>
+
+## Purpose
+
+Describe why this component is linked.
+
+## Not used for
+
+- runtime imports
+- generated code copied into native assets
+- required downstream installation content
+EOF
+
+git add components/<repo>.metaskills.md
+```
 
 ## Clone with components
 
@@ -88,8 +160,10 @@ Review, test, and commit the updated pointers in the parent repository.
 
 ## Rules of thumb
 
+- Give every component a `.metaskills.md` metadata file with a declared mode.
 - Commit component changes inside the component repo first.
 - Push component branches to the component remote and open PRs there.
 - Commit parent pointer changes in `metaskills` only after deciding which component commit should be referenced.
 - Keep native metaskills assets outside `components/`.
 - Keep external repos inside `components/` as submodules instead of copied source.
+- For installable assets such as `npx skill skills/<name>`, keep required templates and references inside the install unit.

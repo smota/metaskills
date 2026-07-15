@@ -11,7 +11,7 @@ This repository is intentionally **not** a management platform, agent runtime, o
 - agent instructions and operating guides
 - reusable skill definitions
 - toolset documentation and integration notes
-- project templates for agent-enabled repositories
+- asset-owned templates for agent-enabled repositories
 - examples that demonstrate how skills compose inside real projects
 
 These assets should help other repositories bootstrap consistent agent behavior without turning this repository into the central place where those projects are managed.
@@ -33,7 +33,6 @@ These assets should help other repositories bootstrap consistent agent behavior 
 ├── agents/                # Native agent role definitions and examples
 ├── toolsets/              # Native tooling guides, wrappers, and integration notes
 ├── components/            # External repos linked as Git submodules
-├── templates/             # Starter files for downstream projects
 ├── examples/              # Small examples showing usage in consuming projects
 └── docs/                  # Design notes and conventions
 ```
@@ -48,7 +47,8 @@ Add material when it is reusable across projects, such as:
 - an agent role definition that can be adapted by another repository
 - documentation for a toolset used by agent workflows
 - external component repositories linked under `components/` as Git submodules
-- repository setup templates such as `AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `AGY.md`, `GEMINI.md`, GitHub Copilot instructions, or skill manifests
+- repository setup instructions such as `AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `AGY.md`, `GEMINI.md`, GitHub Copilot instructions, or skill manifests
+- templates colocated with the skill, agent, or toolset that owns them
 - examples that show how a consuming project should adopt a skill
 
 ## What does not belong here
@@ -78,15 +78,22 @@ External repositories that should keep their own Git history, branches, releases
 
 Use this for component repos that need to be developed from this workspace while still allowing contributors to sync, merge, and send PRs to the original upstream repository.
 
+Every component should declare its mode in a sibling `components/<name>.metaskills.md` file:
+
+- `reference-only` — pinned prior art or reference material; not imported or run
+- `development-companion` — used for upstream-compatible development and PRs
+- `tool-provider` — scripts, CLIs, schemas, or tests are intentionally called from the submodule
+
 See [`docs/submodules.md`](./docs/submodules.md) for the full workflow.
 
 ## Getting started
 
 1. Read [`AGENTS.md`](./AGENTS.md) for workspace conventions.
-2. Add native reusable assets under `skills/`, `agents/`, `toolsets/`, `templates/`, or `examples/`.
-3. Add independently maintained external repositories under `components/` as Git submodules.
-4. Document each asset with its purpose, expected inputs, expected outputs, and adoption instructions.
-5. Keep downstream-project-specific notes in the downstream project, not here.
+2. Add native reusable assets under `skills/`, `agents/`, `toolsets/`, or `examples/`.
+3. Keep templates inside the skill, agent, or toolset that owns them.
+4. Add independently maintained external repositories under `components/` as Git submodules with `.metaskills.md` metadata.
+5. Document each asset with its purpose, expected inputs, expected outputs, and adoption instructions.
+6. Keep downstream-project-specific notes in the downstream project, not here.
 
 ## Multi-agent development
 

@@ -2,6 +2,10 @@
 
 Source component: [`../../../components/agent-skill-creator`](../../../components/agent-skill-creator)
 
+Component metadata: [`../../../components/agent-skill-creator.metaskills.md`](../../../components/agent-skill-creator.metaskills.md)
+
+Mode: `reference-only`
+
 Ideas to use as implementation/reference:
 
 - accept plain English, files, links, scripts, or transcripts as source material
@@ -13,7 +17,10 @@ Ideas to use as implementation/reference:
 
 Recommended adaptation:
 
-1. Use `agent-skill-creator` as a submodule/component reference, not as vendored source.
+1. Use `agent-skill-creator` as a pinned reference-only submodule, not as vendored source.
 2. Keep `agent-builder` native to this repo under `skills/agent-builder`.
-3. If improvements are needed upstream, branch inside `components/agent-skill-creator` and send PRs there.
-4. Update the parent submodule pointer only after selecting a known-good upstream commit.
+3. Keep templates and required install content inside `skills/agent-builder/` so `npx skill skills/agent-builder` installs a complete package.
+4. If improvements are needed upstream, branch inside `components/agent-skill-creator` and send PRs there.
+5. Update the parent submodule pointer only after selecting a known-good upstream commit.
+
+Because this is `reference-only`, the `agent-builder` skill must not require the submodule at runtime or during installation.

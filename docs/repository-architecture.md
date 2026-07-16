@@ -20,7 +20,7 @@ skills/<skill-name>/
 └── examples/
 ```
 
-This avoids repo-level template duplication and ensures package installers such as `npx skill skills/<name>` install a complete, self-contained skill.
+This avoids repo-level template duplication and ensures package installers such as `npx skills add <repo> --skill <name>` install a complete, self-contained skill.
 
 ## Top-level structure
 

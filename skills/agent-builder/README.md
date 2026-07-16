@@ -57,7 +57,7 @@ The installable skill package includes its own templates under [`templates/`](./
 - `agent-tool-actions.md`
 - `agent-validation-checklist.md`
 
-These templates live inside the skill package so installers such as `npx skill skills/agent-builder` install a complete, self-contained skill.
+These templates live inside the skill package so installers such as `npx skills add <repo> --skill agent-builder` install a complete, self-contained skill.
 
 ## Validation
 

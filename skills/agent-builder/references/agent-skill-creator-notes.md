@@ -19,7 +19,7 @@ Recommended adaptation:
 
 1. Use `agent-skill-creator` as a pinned reference-only submodule, not as vendored source.
 2. Keep `agent-builder` native to this repo under `skills/agent-builder`.
-3. Keep templates and required install content inside `skills/agent-builder/` so `npx skill skills/agent-builder` installs a complete package.
+3. Keep templates and required install content inside `skills/agent-builder/` so `npx skills add <repo> --skill agent-builder` installs a complete package.
 4. If improvements are needed upstream, branch inside `components/agent-skill-creator` and send PRs there.
 5. Update the parent submodule pointer only after selecting a known-good upstream commit.
 

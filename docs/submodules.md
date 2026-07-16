@@ -166,4 +166,4 @@ Review, test, and commit the updated pointers in the parent repository.
 - Commit parent pointer changes in `metaskills` only after deciding which component commit should be referenced.
 - Keep native metaskills assets outside `components/`.
 - Keep external repos inside `components/` as submodules instead of copied source.
-- For installable assets such as `npx skill skills/<name>`, keep required templates and references inside the install unit.
+- For installable assets such as `npx skills add <repo> --skill <name>`, keep required templates and references inside the install unit.

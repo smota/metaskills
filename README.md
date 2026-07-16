@@ -6,38 +6,32 @@ Installable skills for building better agents and skills in your own projects.
 
 ## Quick start
 
-Install a skill with `npx skill` by pointing `SKILL_BASE_URL` at this repository.
+Install a skill with the `npx skills` CLI. It installs skills into the agent-specific location you choose, such as `.agents/skills`, `.claude/skills`, `.codex/skills`, or another supported target.
 
-### macOS, Linux, or Git Bash
+### macOS, Linux, Git Bash, or PowerShell
 
-```bash
-SKILL_BASE_URL=https://github.com/smota/metaskills/tree/main \
-npx skill skills/agent-builder
-```
+List the skills available from this repository:
 
 ```bash
-SKILL_BASE_URL=https://github.com/smota/metaskills/tree/main \
-npx skill skills/skill-creator
+npx skills add https://github.com/smota/metaskills --list --full-depth
 ```
 
-### PowerShell
+Install one or more skills:
 
-```powershell
-$env:SKILL_BASE_URL = "https://github.com/smota/metaskills/tree/main"
-npx skill skills/agent-builder
-npx skill skills/skill-creator
+```bash
+npx skills add https://github.com/smota/metaskills --skill agent-builder --full-depth
+npx skills add https://github.com/smota/metaskills --skill skill-creator --full-depth
+```
+
+The installer prompts for the target agent when needed. To install without prompts, pass an explicit agent target, for example:
+
+```bash
+npx skills add https://github.com/smota/metaskills --skill agent-builder --agent claude-code --full-depth -y
 ```
 
 ### What gets installed
 
-`npx skill` installs each skill into your current project's `.codebuddy/skills/` directory:
-
-```text
-.codebuddy/skills/agent-builder/
-.codebuddy/skills/skill-creator/
-```
-
-Each installed skill is self-contained and includes its own `SKILL.md`, README, templates, checklists, references, and examples.
+Each installed skill is self-contained and includes its own `SKILL.md`, README, templates, checklists, references, and examples. The exact install path depends on the selected target agent.
 
 ## Available skills
 
@@ -140,8 +134,14 @@ Create a benchmark plan comparing v1 and v2 of this skill.
 After installing, check that the skill package exists:
 
 ```bash
-find .codebuddy/skills/agent-builder -maxdepth 2 -type f
-find .codebuddy/skills/skill-creator -maxdepth 2 -type f
+npx skills list
+```
+
+You can also inspect the agent-specific install directory selected during installation, for example:
+
+```bash
+find .agents/skills/agent-builder -maxdepth 2 -type f
+find .agents/skills/skill-creator -maxdepth 2 -type f
 ```
 
 You should see files such as:
@@ -158,7 +158,7 @@ examples/
 ## Use in a downstream project
 
 1. Open the project where you want the skill available.
-2. Run the `npx skill` install command from that project root.
+2. Run the `npx skills add` install command from that project root.
 3. Ask your coding agent to use the installed skill by name.
 4. Keep generated agents or skills in your project repo.
 5. Re-run the install command when you want the latest version.

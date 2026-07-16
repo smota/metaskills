@@ -1,6 +1,12 @@
 ---
 name: agent-builder
-description: Use when a user wants to build, design, refine, validate, or package an AI agent, copilot, coding assistant, skill-building assistant, tool-enabled agent, or reusable agent definition for another project. Triggers include: build an agent, create an agent, agent builder, design a copilot, make an AI assistant, agent instructions, agent with tools, agent with knowledge, starter prompts, package an agent, validate an agent.
+description: >-
+  Use when a user wants to build, design, refine, validate, or package an AI
+  agent, copilot, coding assistant, skill-building assistant, tool-enabled
+  agent, or reusable agent definition for another project. Triggers include:
+  build an agent, create an agent, agent builder, design a copilot, make an AI
+  assistant, agent instructions, agent with tools, agent with knowledge,
+  starter prompts, package an agent, validate an agent.
 ---
 
 # Agent Builder

@@ -1,6 +1,6 @@
 # Agent evals
 
-Use lightweight pass/fail cases before adding heavier automation.
+Use lightweight pass/fail cases before adding heavier automation. For automated environments, populate `agent-eval-suite.json` using the structured JSON manifest template.
 
 ## Eval case template
 

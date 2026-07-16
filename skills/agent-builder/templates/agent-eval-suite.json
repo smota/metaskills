@@ -1,0 +1,14 @@
+{
+  "suite_name": "agent-eval-suite",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "eval-001",
+      "scenario": "Basic execution check",
+      "prompt": "Test prompt here",
+      "context": "Any required context or mock data",
+      "expected_action": "The agent should call tool X",
+      "expected_output_contains": ["success", "completed"]
+    }
+  ]
+}

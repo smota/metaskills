@@ -63,7 +63,7 @@ Prefer pass/fail cases with:
 
 ### 3. Improve
 
-Revise a skill using feedback, failed evals, benchmark results, or observed gaps.
+Revise a skill using feedback, failed evals, benchmark results, or observed gaps. Ensure you parse and ingest any logs from `feedback.jsonl` to address recurring failures.
 
 Improve:
 
@@ -99,7 +99,7 @@ Learning must be explicit, file-based, and reviewable.
 
 Optionally design privacy-safe telemetry plans for downstream projects.
 
-Telemetry must be opt-in, local-first by default, and avoid raw prompts, secrets, customer data, and full conversation logs unless the downstream owner explicitly approves them.
+Telemetry must be opt-in, local-first by default, and avoid raw prompts, secrets, customer data, and full conversation logs unless the downstream owner explicitly approves them. Provide the user with `telemetry-dashboard.html` to visualize their local JSONL logs.
 
 ## Progressive disclosure rules
 

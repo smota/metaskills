@@ -27,6 +27,23 @@ permissions:
 ---
 ```
 
+## SKILL.md Architecture Workflow
+
+Every skill should include a state diagram visualizing its workflow.
+
+```markdown
+## Workflow
+
+```mermaid
+stateDiagram-v2
+    [*] --> Initialize
+    Initialize --> Action1
+    Action1 --> Evaluate
+    Evaluate --> [*]: Success
+    Evaluate --> Action1: Failure
+```
+```
+
 ## README.md sections
 
 - Purpose

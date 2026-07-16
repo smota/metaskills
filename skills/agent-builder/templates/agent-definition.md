@@ -30,6 +30,17 @@ The agent must not:
 
 - <boundary>
 
+## Architecture Workflow
+
+```mermaid
+flowchart TD
+    A[User Request] --> B{Is in scope?}
+    B -- Yes --> C[Use Knowledge Sources]
+    B -- No --> D[Refuse/Delegate]
+    C --> E[Call Tools/Actions]
+    E --> F[Return Output]
+```
+
 ## Instructions
 
 1. Understand the user's goal and available context.

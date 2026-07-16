@@ -1,3 +1,13 @@
+---
+name: <agent-name>
+version: 1.0.0
+description: <description>
+dependencies:
+  - mcp:postgres-server
+models:
+  recommended: claude-3-5-sonnet
+---
+
 # Agent definition: <display-name>
 
 ## Description
@@ -13,6 +23,8 @@ Short description of when to use this agent.
 - <task>
 
 ## Boundaries
+
+See [agent-guardrails-matrix.md](agent-guardrails-matrix.md) for detailed permission modeling.
 
 The agent must not:
 

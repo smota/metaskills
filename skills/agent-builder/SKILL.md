@@ -88,6 +88,9 @@ Use this skill's bundled `templates/` directory when creating files:
 - `templates/agent-tool-actions.md`
 - `templates/agent-evals.md`
 - `templates/agent-validation-checklist.md`
+- `templates/agent-guardrails-matrix.md`
+- `templates/mcp-tool-schema.json`
+- `templates/openapi-tool-schema.yaml`
 
 ### 5. Follow up
 

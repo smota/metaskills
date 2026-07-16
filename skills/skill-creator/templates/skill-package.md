@@ -6,6 +6,8 @@ skills/<skill-name>/
 ├── README.md
 ├── templates/
 ├── checklists/
+├── security/
+│   └── guardrails-matrix.md
 ├── references/
 └── examples/
 ```
@@ -15,7 +17,13 @@ skills/<skill-name>/
 ```yaml
 ---
 name: <skill-name>
+version: 1.0.0
 description: Use when <specific trigger context>. Triggers include: <keywords>.
+dependencies:
+  - toolset/mcp-github@^1.0
+  - skill/agent-builder@^2.0
+permissions:
+  - read:workspace
 ---
 ```
 

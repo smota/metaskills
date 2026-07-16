@@ -21,6 +21,8 @@ skills/skill-creator/
 ├── README.md
 ├── templates/
 ├── checklists/
+├── security/
+│   └── guardrails-matrix.md
 ├── references/
 └── examples/
 ```

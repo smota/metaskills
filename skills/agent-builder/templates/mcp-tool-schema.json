@@ -1,0 +1,14 @@
+{
+  "name": "tool_name",
+  "description": "Clear description of when and how to use the tool.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "param1": {
+        "type": "string",
+        "description": "..."
+      }
+    },
+    "required": ["param1"]
+  }
+}

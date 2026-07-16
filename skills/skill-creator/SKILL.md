@@ -1,6 +1,11 @@
 ---
 name: skill-creator
+version: 1.0.0
 description: Use when creating, improving, evaluating, benchmarking, packaging, or evolving AI agent skills. Triggers include create a skill, build a skill, skill creator, skill builder, improve a skill, evaluate a skill, benchmark a skill, convert workflow to skill, convert sub-agent to skill, skill telemetry, learning workflow, production-ready SKILL.md.
+dependencies: []
+permissions:
+  - read:workspace
+  - write:workspace
 ---
 
 # Skill Creator
@@ -37,6 +42,8 @@ skills/<skill-name>/
 ├── README.md
 ├── templates/
 ├── checklists/
+├── security/
+│   └── guardrails-matrix.md
 ├── references/
 └── examples/
 ```

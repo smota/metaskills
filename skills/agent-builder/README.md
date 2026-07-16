@@ -52,10 +52,13 @@ The installable skill package includes its own templates under [`templates/`](./
 - `agent-builder-intake.md`
 - `agent-definition.md`
 - `agent-evals.md`
+- `agent-guardrails-matrix.md`
 - `agent-readme.md`
 - `agent-starter-prompts.md`
 - `agent-tool-actions.md`
 - `agent-validation-checklist.md`
+- `mcp-tool-schema.json`
+- `openapi-tool-schema.yaml`
 
 These templates live inside the skill package so installers such as `npx skills add <repo> --skill agent-builder` install a complete, self-contained skill.
 

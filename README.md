@@ -4,6 +4,17 @@ Installable skills for building better agents and skills in your own projects.
 
 `metaskills` is for adopters who want practical, reusable agent-building workflows without adopting a new platform. Install a skill, use it in your project, and keep the generated assets in your own repo.
 
+## Intent and Design Principles
+
+**Intent:** `metaskills` is a workspace for reusable AI agent skills, agent definitions, and toolsets. It helps downstream projects easily adopt, build, or improve their own AI agents and tool-assisted workflows via self-contained packages, without requiring a centralized platform or hosted runtime.
+
+**Design Principles:**
+- **Portability and Independence:** Assets are fully self-contained (with their own `SKILL.md`, templates, and documentation) and usable without requiring this repo to run as a service.
+- **Multi-Agent Compatibility:** `AGENTS.md` acts as the single source of truth for agent instructions. Ecosystem-specific files (like `GEMINI.md` or `CLAUDE.md`) are thin pointers back to it.
+- **Modularity via Submodules:** External tools and referenced repositories are managed as Git submodules under `components/` to avoid copying source code.
+- **Decentralization:** Templates are colocated with the skill that owns them. Repo-level template duplication and centralized complexity are strictly avoided. Project-specific assumptions must be kept out of reusable assets.
+- **Clarity and Predictability:** The structure is standardized with explicit documentation, usage examples, and success criteria over hidden assumptions.
+
 ## Quick start
 
 Install a skill with the `npx skills` CLI. It installs skills into the agent-specific location you choose, such as `.agents/skills`, `.claude/skills`, `.codex/skills`, or another supported target.

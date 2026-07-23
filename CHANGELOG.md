@@ -6,12 +6,26 @@ This project uses lightweight, human-readable release notes. Each release should
 
 ## Unreleased
 
+- No changes yet.
+
+## 1.1 - 2026-07-23
+
 ### Added
 
+- Agent Builder capability maturity model with Level 0-5 guidance.
+- Harness-neutral agent packaging guidance with runtime capability matrices.
+- Harness adapter templates for Pi, Claude, Codex, Gemini, and Microsoft Foundry.
+- Agent-to-agent handoff and subprocess/job execution contract templates.
+- Continuous improvement, feedback, benchmark, and maturity fixture templates.
 - Public contribution pathway and review docs.
 - Example use cases for building agents and skills.
 - Interoperability and trust documentation.
 - Website metadata guidance through `llms.txt` and sitemap updates.
+
+### Changed
+
+- Expanded `agent-builder` templates, checklists, examples, and validation rubric to support maturity-based agent evolution.
+- Strengthened MCP/OpenAPI tool-action safety templates with permissions, confirmation, rollback, audit, and fallback expectations.
 
 ## Release checklist
 

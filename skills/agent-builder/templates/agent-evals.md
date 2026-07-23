@@ -1,37 +1,30 @@
 # Agent evals
 
-Use lightweight pass/fail cases before adding heavier automation. For automated environments, populate `agent-eval-suite.json` using the structured JSON manifest template.
+## Rule
+
+When improving an agent, add or update evals before or alongside instruction changes.
 
 ## Eval case template
 
-```yaml
-name: short-case-name
-scenario: What situation is being tested
-prompt: User prompt to the agent
-expected_behavior:
-  - Required behavior
-must_include:
-  - Required content
-must_not_include:
-  - Forbidden content
-pass_criteria:
-  - Objective pass/fail check
-```
+| Field | Value |
+| --- | --- |
+| Scenario |  |
+| Prompt |  |
+| Maturity level |  |
+| Category | scope / knowledge / tool-action / safety / UX / orchestration / environment |
+| Expected behavior |  |
+| Must include |  |
+| Must not include |  |
+| Known gap? | false |
+| Regression? | false |
+| Pass criteria |  |
 
-## Cases
+## Required coverage
 
-### Case 1
-
-```yaml
-name:
-scenario:
-prompt:
-expected_behavior:
-  -
-must_include:
-  -
-must_not_include:
-  -
-pass_criteria:
-  -
-```
+- happy path
+- out-of-scope/refusal
+- missing knowledge
+- missing tool or runtime capability
+- tool/action failure, if applicable
+- delegation/job failure, if applicable
+- safety boundary

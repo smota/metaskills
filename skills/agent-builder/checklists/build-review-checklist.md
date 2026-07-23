@@ -1,10 +1,14 @@
-# Build review checklist
+# Agent build review checklist
 
-- [ ] Name is short, descriptive, and scoped.
-- [ ] Description explains when to use the agent.
-- [ ] Instructions are operational and ordered.
-- [ ] Knowledge sources include freshness and access notes.
-- [ ] Tools/actions include inputs, outputs, auth, safety, and failure modes.
-- [ ] Starter prompts represent real usage.
-- [ ] Evals or acceptance checks cover the primary workflow.
-- [ ] Boundaries are clear enough for safe refusal or escalation.
+- [ ] Package keeps `AGENT.md` canonical and harness-neutral.
+- [ ] No hosted runtime, daemon, queue, or service was added.
+- [ ] Current and target maturity levels are justified by evidence.
+- [ ] Level 0 agents do not fail because tools/actions are absent.
+- [ ] Level 2+ tools/actions include schema, auth, permission tier, failure, fallback, validation.
+- [ ] Level 4+ orchestration includes runtime capabilities, handoff contract, and execution model.
+- [ ] Delegation scope, authority, statuses, and failure handling are explicit.
+- [ ] Subprocess/job contracts include confirmation, timeout, retry, cancel, resume, rollback.
+- [ ] Adapters do not override canonical semantics.
+- [ ] Missing harness capability has safe fallback.
+- [ ] Secrets/sensitive data restrictions are present.
+- [ ] Evals cover success, refusal, missing capability, and failure paths.

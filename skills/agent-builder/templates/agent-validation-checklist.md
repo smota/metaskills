@@ -1,33 +1,35 @@
 # Agent validation checklist
 
-## Scope
+## Maturity fit
 
-- [ ] Agent has one clear primary job.
-- [ ] Target users are named.
-- [ ] Out-of-scope requests are documented.
+- [ ] Current and target maturity levels are stated.
+- [ ] Level 0 agents do not require tools/actions.
+- [ ] Level 2 agents include MCP/OpenAPI schemas for tools/actions.
+- [ ] Level 4 agents include runtime, handoff, and execution contracts.
+- [ ] Level 5 agents include evals, feedback, benchmark, and changelog artifacts.
 
-## Instructions
+## Harness neutrality
 
-- [ ] Instructions are operational, not just aspirational.
-- [ ] The agent knows when to ask follow-up questions.
-- [ ] The agent knows when to refuse or delegate.
-
-## Knowledge
-
-- [ ] Knowledge sources are explicit.
-- [ ] Freshness expectations are documented.
-- [ ] Access requirements are documented.
+- [ ] `AGENT.md` is canonical.
+- [ ] Adapters do not override semantics.
+- [ ] Required/optional/unavailable capabilities are explicit.
+- [ ] Missing capability fallback is not silent.
 
 ## Tools/actions
 
-- [ ] Each tool/action has a purpose.
-- [ ] Inputs and outputs are clear.
-- [ ] Auth, secrets, and safety constraints are documented.
-- [ ] Failure modes are handled.
+- [ ] Each tool/action passes `tool-action-contract-checklist.md`.
+- [ ] Destructive/external/admin actions require confirmation.
+- [ ] Absence fallback differs from failure fallback.
 
-## Packaging
+## Handoff and jobs
 
-- [ ] README explains downstream adoption.
-- [ ] Starter prompts are realistic.
-- [ ] Evals or acceptance checks are included.
-- [ ] Tool-specific files point back to canonical instructions where possible.
+- [ ] Delegated tasks and forbidden delegated tasks are documented.
+- [ ] Handoff input/output schemas are present when A2A is claimed.
+- [ ] Subprocess/job lifecycle covers timeout, retry, cancel, resume, rollback.
+
+## Safety and quality
+
+- [ ] Knowledge freshness and missing-context behavior are documented.
+- [ ] Secrets and sensitive data handling are documented.
+- [ ] Evals cover success, refusal, missing capability, and failure paths.
+- [ ] Known gaps and follow-up are listed.

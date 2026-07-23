@@ -30,3 +30,10 @@ A repository needs a coding assistant that follows local conventions and coordin
 - The agent names files changed.
 - The agent reports tests or explains why they were not run.
 - The agent does not claim unsupported validation.
+
+
+## Maturity
+
+Current maturity: Level 4 orchestrating agent.
+
+Runtime capability fallback: if target harness lacks required tools, delegation, or jobs, use documented manual fallback rather than silent failure.

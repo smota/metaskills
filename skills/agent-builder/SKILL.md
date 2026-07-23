@@ -3,9 +3,10 @@ name: agent-builder
 description: >-
   Use when a user wants to build, design, refine, validate, or package an AI
   agent, copilot, coding assistant, skill-building assistant, tool-enabled
-  agent, or reusable agent definition for another project. Triggers include:
-  build an agent, create an agent, agent builder, design a copilot, make an AI
-  assistant, agent instructions, agent with tools, agent with knowledge,
+  agent, orchestrating agent, or reusable agent definition for another project.
+  Triggers include build an agent, create an agent, agent builder, design a
+  copilot, make an AI assistant, agent instructions, agent with tools, agent
+  with knowledge, agent-to-agent collaboration, subprocess/job execution,
   starter prompts, package an agent, validate an agent.
 ---
 
@@ -13,57 +14,61 @@ description: >-
 
 Use this skill to turn a plain-language goal into a portable agent definition that another project can adopt.
 
-This skill borrows the simple configure-and-review workflow from Microsoft 365 Copilot Agent Builder and the plain-English-to-reusable-asset strategy from `agent-skill-creator`, while staying tool-neutral and repository-portable.
+The skill is harness-neutral by default and harness-capability-aware when a target environment provides subagents, async jobs, MCP/OpenAPI tools/actions, memory, or deployment features.
 
 ## Non-goals
 
-Do not turn the current repository into a hosted agent platform, management system, or runtime. Produce files, instructions, templates, and validation guidance that downstream projects can copy, install, or adapt.
+Do not turn this repository into a hosted agent platform, management system, job runner, queue, or runtime. Produce files, instructions, templates, contracts, adapters, and validation guidance that downstream projects can copy, install, or adapt.
 
 ## Workflow
 
 ### 1. Understand
 
-Collect the minimum information needed to scope the agent:
+Collect minimum information needed:
 
-- user goal and target users
-- jobs the agent must perform
-- jobs the agent must refuse or delegate
-- expected input and output formats
-- knowledge sources the agent can use
-- tools/actions the agent needs
-- security, privacy, and compliance boundaries
-- target downstream environment, if known
+- goal and target users
+- current maturity level and target maturity level
+- target harnesses or deployment environments
+- jobs to perform, refuse, or delegate
+- expected inputs and outputs
+- knowledge sources and freshness expectations
+- tools/actions needed, if any
+- runtime capabilities needed: A2A, subagents, subprocess/job execution, async follow-up, MCP/OpenAPI, memory, audit/logs
+- acceptable fallback when a capability is unavailable or unknown
+- security, privacy, compliance, and mutation authority boundaries
 
-If the user gives enough information, proceed without a long questionnaire. Ask only for missing decisions that materially affect safety or usefulness.
+Ask only for missing decisions that materially affect safety or usefulness.
 
 ### 2. Configure
 
-Draft an agent specification with:
+Draft a harness-neutral agent package with:
 
-- name: short, descriptive, and scoped
-- description: one paragraph explaining when to use the agent
-- instructions: operational behavior, boundaries, and workflow
-- knowledge: source list, freshness expectations, and access notes
-- tools/actions: required capabilities, inputs, outputs, auth, and failure modes
-- starter prompts: realistic prompts users can try immediately
-- acceptance criteria: how to tell whether the agent works
+- canonical `AGENT.md`
+- maturity scorecard
+- runtime capability matrix
+- knowledge source contract
+- tools/actions contracts with MCP/OpenAPI schemas
+- handoff contract for Level 4+ collaboration
+- execution model for Level 4+ subprocess/job work
+- adapter docs for target harnesses
+- starter prompts
+- evals and acceptance criteria
+- continuous-improvement artifacts for Level 5
 
 ### 3. Review
 
-Check the draft against this rubric:
+Check level-aware fit:
 
-- Is the agent scoped to a clear job?
-- Are instructions specific enough to execute?
-- Are knowledge sources explicit?
-- Are tools/actions necessary and safe?
-- Are refusal/delegation boundaries clear?
-- Are starter prompts realistic?
-- Is the output portable across projects?
-- Are validation steps included?
+- Level 0 must not require tools/actions.
+- Level 2 must include schemas and safe fallbacks for tools/actions.
+- Level 3 mutating actions must include confirmation, rollback, and audit notes.
+- Level 4 orchestration must include handoff, runtime capability, and subprocess/job contracts.
+- Level 5 must include feedback, evals, benchmark, and changelog workflow.
+- Adapters must not redefine canonical `AGENT.md` semantics.
 
 ### 4. Package
 
-Prefer a portable package structure:
+Preferred package:
 
 ```text
 agents/<agent-name>/
@@ -72,46 +77,22 @@ agents/<agent-name>/
 ├── starter-prompts.md
 ├── knowledge-sources.md
 ├── tools-actions.md
-└── evals.md
+├── runtime-capabilities.md
+├── capability-maturity-scorecard.md
+├── agent-guardrails-matrix.md
+├── agent-validation-checklist.md
+├── evals.md
+├── CHANGELOG.md
+├── handoff-contract.md              # Level 4+
+├── execution-model.md               # Level 4+
+├── continuous-improvement-plan.md    # Level 5
+└── adapters/                         # optional harness capability mapping
 ```
 
-For skill-oriented outputs, use:
+## Included templates
 
-```text
-skills/<skill-name>/
-├── SKILL.md
-├── README.md
-├── references/
-└── examples/
-```
+Use files under `templates/`, including maturity scorecard, runtime capabilities, handoff contract, execution model, tools/actions, MCP/OpenAPI schema starters, adapters, evals, benchmark, feedback, and changelog templates.
 
-Use this skill's bundled `templates/` directory when creating files:
+## Validation
 
-- `templates/agent-builder-intake.md`
-- `templates/agent-definition.md`
-- `templates/agent-readme.md`
-- `templates/agent-starter-prompts.md`
-- `templates/agent-tool-actions.md`
-- `templates/agent-evals.md`
-- `templates/agent-validation-checklist.md`
-- `templates/agent-guardrails-matrix.md`
-- `templates/mcp-tool-schema.json`
-- `templates/openapi-tool-schema.yaml`
-
-### 5. Follow up
-
-End with:
-
-- files created or proposed
-- validation performed
-- unresolved questions
-- recommended next increment
-
-## Output contract
-
-When asked to build an agent, produce either:
-
-1. a concise plan when implementation is not requested, or
-2. concrete files when implementation is requested.
-
-Use Markdown for human-editable assets. Keep tool-specific files as pointers to a canonical source where possible.
+Use `references/validation-rubric.md` and `checklists/` before committing or sharing. Report gaps and follow-up honestly.

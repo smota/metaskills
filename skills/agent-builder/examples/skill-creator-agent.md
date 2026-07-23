@@ -31,3 +31,10 @@ A team wants an agent that converts repeatable internal workflows into reusable 
 - The skill has clear trigger language.
 - Detailed reference content is not overloaded into the main skill file.
 - The package includes examples and validation guidance.
+
+
+## Maturity
+
+Current maturity: Level 2 tool-enabled agent.
+
+Runtime capability fallback: if target harness lacks required tools, delegation, or jobs, use documented manual fallback rather than silent failure.

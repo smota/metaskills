@@ -1,24 +1,79 @@
 openapi: 3.1.0
 info:
-  title: Tool API
+  title: Example Agent Action API
   version: 1.0.0
+  description: >-
+    Starter OpenAPI action contract. Permission tier: read. Destructive or externally
+    visible paths must require confirmation, rollback notes, and audit expectations.
+servers:
+  - url: https://api.example.com
+security:
+  - bearerAuth: []
 paths:
-  /tool_action:
+  /lookup:
     post:
-      operationId: tool_action
-      summary: Clear description of the tool action
+      operationId: lookupResource
+      summary: Lookup a resource
+      description: >-
+        Read-only lookup. Tool absence fallback: manual lookup instructions.
+        Tool failure fallback: report error and ask whether to retry.
+      x-agentbuilder-permission-tier: read
+      x-agentbuilder-confirmation-required: false
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                param1:
-                  type: string
-                  description: ...
-              required:
-                - param1
+              $ref: '#/components/schemas/LookupRequest'
       responses:
         '200':
-          description: Success response
+          description: Lookup result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LookupResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Tool failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: token
+      description: Do not commit tokens or secrets.
+  schemas:
+    LookupRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        query:
+          type: string
+      required: [query]
+    LookupResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        summary:
+          type: string
+        source:
+          type: string
+      required: [summary]
+    ErrorResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        error:
+          type: string
+        fallback:
+          type: string
+      required: [error, fallback]

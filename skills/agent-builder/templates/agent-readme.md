@@ -1,36 +1,45 @@
-# <Agent Display Name>
+# <Agent name>
 
 ## Purpose
 
-Describe what this agent helps users accomplish.
+<What this agent helps users do.>
 
-## When to use
+## Maturity
 
-- <use case>
-
-## When not to use
-
-- <out-of-scope case>
+- Current level: `<0-5>`
+- Target level: `<0-5>`
+- See `capability-maturity-scorecard.md`.
 
 ## Package contents
 
-```text
-README.md
-AGENT.md
-starter-prompts.md
-knowledge-sources.md
-tools-actions.md
-evals.md
-```
+Core harness-neutral files:
 
-## Setup
+- `AGENT.md` - canonical instructions
+- `starter-prompts.md`
+- `knowledge-sources.md`
+- `tools-actions.md`
+- `agent-guardrails-matrix.md`
+- `agent-validation-checklist.md`
+- `evals.md`
 
-Describe how a downstream project installs or references this agent.
+Optional capability files:
+
+- `runtime-capabilities.md`
+- `capability-maturity-scorecard.md`
+- `handoff-contract.md`
+- `execution-model.md`
+- `continuous-improvement-plan.md`
+- `CHANGELOG.md`
+- `adapters/`
+
+## Install/adopt
+
+Copy this package into a downstream repo. It does not require `metaskills` at runtime.
+
+## Harness adapters
+
+Adapters may describe how to use platform features when present. If a harness lacks subagents, async jobs, MCP/OpenAPI tools/actions, or memory, follow documented fallback behavior.
 
 ## Validation
 
-List commands, manual checks, or acceptance criteria used to verify the agent.
-
-## Follow-up
-
-List known gaps or future improvements.
+Run the evals and checklist before release.

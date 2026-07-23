@@ -1,14 +1,19 @@
 {
-  "suite_name": "agent-eval-suite",
+  "agent": "<agent-name>",
   "version": "1.0.0",
-  "cases": [
+  "current_maturity_level": 0,
+  "evals": [
     {
-      "id": "eval-001",
-      "scenario": "Basic execution check",
-      "prompt": "Test prompt here",
-      "context": "Any required context or mock data",
-      "expected_action": "The agent should call tool X",
-      "expected_output_contains": ["success", "completed"]
+      "id": "scope-happy-path",
+      "category": "scope",
+      "maturity_level": 0,
+      "prompt": "<prompt>",
+      "expected_behavior": "<expected>",
+      "must_include": [],
+      "must_not_include": [],
+      "known_gap": false,
+      "regression": false,
+      "pass_criteria": "<criteria>"
     }
   ]
 }

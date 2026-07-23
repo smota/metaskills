@@ -1,6 +1,6 @@
 # Safety boundaries for generated agents
 
-Generated agents should include boundaries appropriate to their tools and knowledge.
+Generated agents should include boundaries appropriate to maturity, tools, knowledge, collaboration, and runtime.
 
 ## Default boundaries
 
@@ -12,29 +12,28 @@ Generated agents should include boundaries appropriate to their tools and knowle
 
 ## Tool/action boundaries
 
-For each tool/action, document:
+For each tool/action, document read/mutate status, permission tier, auth, inputs, outputs, failure modes, confirmation, rollback, audit, and validation.
 
-- whether it is read-only or mutating
-- required permissions
-- expected inputs and outputs
-- known failure modes
-- whether user confirmation is required
-- how to roll back or recover when applicable
+Permission tiers: `read`, `suggest`, `stage`, `mutate`, `external-publish`, `admin`.
+
+## Collaboration boundaries
+
+- Do not forward secrets or sensitive data to another agent.
+- Do not delegate beyond the authority granted in the handoff contract.
+- Do not allow a delegated agent to mutate external systems unless explicitly authorized.
+- Use reviewer/validator gates for high-risk delegated work.
+- If A2A support is unavailable, use manual fallback rather than pretending delegation occurred.
+
+## Subprocess/job boundaries
+
+- Confirm before mutating or externally visible jobs.
+- Define timeout, retry, cancel, resume, and rollback rules.
+- Summarize large outputs; do not hide failures.
 
 ## Knowledge boundaries
 
-For each knowledge source, document:
-
-- freshness expectations
-- allowed use
-- restricted data
-- citation or source-reporting requirements
+For each knowledge source, document freshness, allowed use, restricted data, and citation requirements.
 
 ## Escalation
 
-The agent should pause and ask for human direction when:
-
-- required access is missing
-- user intent conflicts with safety boundaries
-- the action could affect production systems
-- the requested output requires unavailable private context
+Pause and ask for human direction when access is missing, safety conflicts arise, production systems may be affected, or required private context is unavailable.

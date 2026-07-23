@@ -30,3 +30,10 @@ A downstream project wants an agent that prepares release notes from GitHub issu
 - Release notes distinguish features, fixes, docs, and breaking changes.
 - The agent identifies the source range used.
 - The agent asks before writing release files.
+
+
+## Maturity
+
+Current maturity: Level 2 tool-enabled agent.
+
+Runtime capability fallback: if target harness lacks required tools, delegation, or jobs, use documented manual fallback rather than silent failure.

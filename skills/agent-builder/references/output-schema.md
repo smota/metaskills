@@ -1,43 +1,31 @@
-# Agent package output schema
+# Agent builder output schema
 
-A generated agent package should include the following fields.
+Use this shape when returning a generated agent package summary.
 
-## Required fields
-
-```yaml
-name: kebab-case-name
-display_name: Human Friendly Name
-description: Short description of when to use the agent
-target_users:
-  - user group
-jobs_to_be_done:
-  - task the agent performs
-boundaries:
-  - thing the agent must not do
-knowledge_sources:
-  - name: source name
-    type: repo | docs | api | database | file | human-process | other
-    freshness: static | refreshed | live
-    access_notes: how the downstream project grants access
-tools_actions:
-  - name: tool or action name
-    purpose: why it is needed
-    inputs: expected inputs
-    outputs: expected outputs
-    safety: constraints and failure handling
-starter_prompts:
-  - prompt users can try
-acceptance_criteria:
-  - pass/fail criterion
-```
-
-## Recommended files
-
-```text
-agents/<agent-name>/README.md
-agents/<agent-name>/AGENT.md
-agents/<agent-name>/starter-prompts.md
-agents/<agent-name>/knowledge-sources.md
-agents/<agent-name>/tools-actions.md
-agents/<agent-name>/evals.md
+```json
+{
+  "name": "agent-name",
+  "description": "when to use this agent",
+  "current_maturity_level": 0,
+  "target_maturity_level": 1,
+  "canonical_files": ["AGENT.md", "README.md"],
+  "runtime_capabilities": {
+    "required": [],
+    "optional": [],
+    "unavailable": [],
+    "unknown": []
+  },
+  "knowledge_sources": [],
+  "tools_actions": [],
+  "handoff_contracts": [],
+  "subprocess_jobs": [],
+  "adapters": [],
+  "evals": [],
+  "known_gaps": [],
+  "validation": {
+    "status": "pass|partial|fail",
+    "checks": []
+  },
+  "follow_up": []
+}
 ```

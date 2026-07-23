@@ -1,14 +1,26 @@
 {
-  "name": "tool_name",
-  "description": "Clear description of when and how to use the tool.",
+  "name": "example_lookup",
+  "description": "Read-only lookup tool. Permission tier: read. Auth: none. Failure fallback: explain unavailable lookup and ask user for source data.",
   "inputSchema": {
     "type": "object",
+    "additionalProperties": false,
     "properties": {
-      "param1": {
+      "query": {
         "type": "string",
-        "description": "..."
+        "description": "Lookup query"
       }
     },
-    "required": ["param1"]
+    "required": [
+      "query"
+    ]
+  },
+  "_meta": {
+    "agentBuilder": {
+      "permissionTier": "read",
+      "confirmationRequired": false,
+      "toolAbsentFallback": "Use manual source instructions.",
+      "toolFailureFallback": "Report failure and ask for retry or source data.",
+      "validation": "Call with sample query and verify structured result or clear error."
+    }
   }
 }

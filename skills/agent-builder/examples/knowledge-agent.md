@@ -34,3 +34,10 @@ agents/onboarding-guide/
 - Answers cite or name the source document used.
 - If docs are missing, the agent says what is missing instead of inventing details.
 - The agent does not make code changes unless explicitly asked.
+
+
+## Maturity
+
+Current maturity: Level 1 knowledge agent.
+
+Runtime capability fallback: if target harness lacks required tools, delegation, or jobs, use documented manual fallback rather than silent failure.

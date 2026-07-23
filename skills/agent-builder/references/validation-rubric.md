@@ -4,37 +4,52 @@ Score each item as pass, partial, or fail.
 
 ## 1. Scope
 
-- The agent has a single clear primary job.
-- Target users are identified.
-- Out-of-scope work is explicit.
+- Single clear primary job.
+- Target users identified.
+- Out-of-scope work explicit.
 
-## 2. Instructions
+## 2. Maturity fit
 
-- Instructions describe concrete behavior.
-- The agent has a repeatable workflow.
-- Follow-up question rules are clear.
-- Refusal and delegation boundaries are clear.
+- Current and target maturity levels are stated.
+- Level 0 prompt agents can pass without tools/actions.
+- Level 2 agents have tool/action schemas and fallbacks.
+- Level 4 orchestration claims have runtime, handoff, and execution contracts.
+- Level 5 agents have evals, feedback, benchmark, and changelog workflow.
 
-## 3. Knowledge
+## 3. Instructions
 
-- Knowledge sources are named.
-- Freshness expectations are documented.
-- Missing-knowledge behavior is defined.
+- Concrete behavior and repeatable workflow.
+- Follow-up question rules clear.
+- Refusal and delegation boundaries clear.
 
-## 4. Tools/actions
+## 4. Knowledge
 
-- Each tool/action has a purpose.
-- Inputs, outputs, permissions, and failure modes are documented.
-- The agent asks before destructive or externally visible actions.
+- Sources named.
+- Freshness expectations documented.
+- Missing-knowledge behavior defined.
 
-## 5. User experience
+## 5. Tools/actions
+
+- Purpose, inputs, outputs, permissions, auth, failure modes documented.
+- Permission tier assigned.
+- Destructive/external/admin actions require confirmation.
+- Tool absence and tool failure have distinct fallbacks.
+
+## 6. Runtime capabilities
+
+- Required, optional, unavailable, and unknown states documented.
+- Harness adapters do not override `AGENT.md` semantics.
+- Missing capabilities degrade safely.
+
+## 7. Handoff and subprocess/job execution
+
+- Delegated tasks have input/output schemas and authority limits.
+- Job lifecycle covers start, observe, wait, cancel, retry, resume, complete.
+- Structured `error/fallback` behavior exists.
+
+## 8. User experience and portability
 
 - Starter prompts match real use cases.
-- Outputs are concise and actionable.
-- The agent explains assumptions and gaps.
-
-## 6. Portability
-
-- The canonical instructions are tool-neutral.
-- Target-specific files point back to canonical instructions.
-- The package can be copied into a downstream repo without this repo running as a service.
+- Outputs concise and actionable.
+- Canonical instructions are tool-neutral.
+- Package can be copied into a downstream repo without this repo running as a service.

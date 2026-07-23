@@ -1,10 +1,14 @@
-# Release checklist
+# Agent package release checklist
 
-- [ ] Agent package has a README.
-- [ ] Canonical instructions are present.
-- [ ] Target-specific files point to canonical instructions where possible.
-- [ ] Examples or starter prompts are included.
-- [ ] Validation checklist has been completed.
-- [ ] Any tool/action risks are documented.
-- [ ] No secrets or private environment values are committed.
-- [ ] Follow-up work is documented.
+- [ ] Review `git status` and confirm intended files only.
+- [ ] Package can be copied out of `metaskills` with no runtime dependency on this repo.
+- [ ] `AGENT.md` is canonical; compatibility files/adapters point back to it.
+- [ ] No long instructions are duplicated across harness files.
+- [ ] Runtime capabilities include required/optional/unavailable/unknown states.
+- [ ] Adapter files are isolated under `adapters/` or documented target sections.
+- [ ] Feedback artifacts contain redaction/local-only guidance and no secrets.
+- [ ] Examples state maturity level and fallback behavior.
+- [ ] JSON templates validate.
+- [ ] OpenAPI YAML indentation and schema structure reviewed.
+- [ ] README and SKILL template lists match files shipped.
+- [ ] Changelog records what changed and why.

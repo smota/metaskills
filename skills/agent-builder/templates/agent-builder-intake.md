@@ -1,39 +1,51 @@
 # Agent builder intake
 
-Use this intake to gather enough information to build a useful portable agent without over-questioning the user.
-
 ## Goal
 
-What should the agent help users accomplish?
+- What should the agent help users do?
+- Who are target users?
 
-## Target users
+## Maturity
 
-Who will use the agent?
+- Current maturity level, if known:
+- Target maturity level for first release:
+- Must this pass as a Level 0 prompt-only agent? yes/no
 
-## Jobs to be done
+## Scope
 
-List the concrete tasks the agent should perform.
+- Jobs to perform:
+- Jobs to refuse:
+- Jobs to delegate:
 
-## Out of scope
+## Knowledge
 
-List tasks the agent should refuse, delegate, or avoid.
-
-## Knowledge sources
-
-| Source | Type | Freshness | Access notes |
-| --- | --- | --- | --- |
-|  |  |  |  |
+- Sources:
+- Freshness expectations:
+- Missing-context behavior:
 
 ## Tools/actions
 
-| Tool/action | Purpose | Inputs | Outputs | Safety notes |
-| --- | --- | --- | --- | --- |
-|  |  |  |  |  |
+- Required tools/actions, or `none`:
+- Read-only vs mutating:
+- MCP/OpenAPI schema availability:
+- Auth/secrets constraints:
 
-## Output style
+## Runtime capabilities
 
-Describe tone, format, length, or structured output requirements.
+- Target harnesses:
+- Agent-to-agent collaboration needed? yes/no/unknown
+- Subprocess/job triggering needed? yes/no/unknown
+- Async follow-up needed? yes/no/unknown
+- Acceptable fallback if capability missing:
 
-## Acceptance criteria
+## Safety
 
-How will we know the agent works?
+- Sensitive data restrictions:
+- Confirmation requirements:
+- Rollback needs:
+
+## Outputs
+
+- Expected response format:
+- Starter prompts:
+- Acceptance criteria:

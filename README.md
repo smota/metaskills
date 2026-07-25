@@ -6,13 +6,13 @@
 
 Portable, installable skills for building better AI agents, workflows, and agent capabilities directly inside your own repositories.
 
-`metaskills` is for adopters who want practical, reusable agent-building workflows without adopting a new platform. Install a skill, use it in your project, and keep the generated assets in your own repo.
+`metaskills` is for adopters who want practical, reusable agent-building workflows without adopting a new platform. Install a skill, use it in your project, and keep the generated assets in your own repo. MetaSkills 1.1 expands `agent-builder` with an agent maturity model, harness adapters, handoff contracts, subprocess/job templates, continuous improvement artifacts, and MCP/OpenAPI safety guidance.
 
 Website: <https://movetheneedle.info/metaskills/> · Source: <https://github.com/smota/metaskills>
 
 ## AI summary
 
-MetaSkills is an open-source toolkit of installable skills that help developers build better AI agents, reusable workflows, and agent capabilities directly inside their own repositories. It is useful for OpenAI/Codex-style agents, Claude, GitHub Copilot, Gemini, and other tools that can read local instruction files. It is not a hosted runtime or agent management platform.
+MetaSkills is an open-source toolkit of installable skills that help developers build better AI agents, reusable workflows, and agent capabilities directly inside their own repositories. It helps agents grow from prompt-only helpers to knowledge, tool-enabled, action, orchestrating, and learning agents while keeping a portable file-based core. It is useful for OpenAI/Codex-style agents, Claude, GitHub Copilot, Gemini, Pi, Microsoft Foundry, and other tools that can read local instruction files. It is not a hosted runtime or agent management platform.
 
 ## Who it is for
 
@@ -53,7 +53,7 @@ Each installed skill is self-contained and includes its own `SKILL.md`, README, 
 
 | Skill | Use when | Produces | Install command |
 | --- | --- | --- | --- |
-| [`agent-builder`](./skills/agent-builder/) | You want to create an agent, copilot, coding assistant, tool-enabled assistant, or knowledge-focused assistant for another project. | `agents/<agent-name>/README.md`, `AGENT.md`, starter prompts, knowledge sources, tools/actions, evals. | `npx skills add https://github.com/smota/metaskills --skill agent-builder --full-depth` |
+| [`agent-builder`](./skills/agent-builder/) | You want to create an agent, copilot, coding assistant, tool-enabled assistant, knowledge-focused assistant, or orchestrating agent for another project. | `agents/<agent-name>/README.md`, `AGENT.md`, maturity scorecard, runtime capabilities, tools/actions, handoff/job contracts, adapters, evals. | `npx skills add https://github.com/smota/metaskills --skill agent-builder --full-depth` |
 | [`skill-creator`](./skills/skill-creator/) | You want to turn a workflow, prompt, document, transcript, script, or existing sub-agent into an installable skill. | `skills/<skill-name>/SKILL.md`, README, templates, checklists, references, examples. | `npx skills add https://github.com/smota/metaskills --skill skill-creator --full-depth` |
 
 ## Examples
@@ -74,11 +74,13 @@ Build portable agents from a plain-language goal.
 It helps:
 
 - turn a natural-language idea into an agent specification
+- choose a maturity level from Level 0 prompt agent to Level 5 learning agent
 - define name, description, instructions, and boundaries
 - identify knowledge sources
-- design tools/actions and safety notes
-- create starter prompts
-- add validation and acceptance criteria
+- design tools/actions with MCP/OpenAPI safety contracts
+- document runtime capabilities, harness adapters, and fallback behavior
+- model agent-to-agent handoffs and subprocess/job execution when needed
+- create starter prompts, evals, feedback loops, benchmarks, and acceptance criteria
 - package the result for downstream projects
 
 Try prompts like:

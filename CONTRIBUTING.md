@@ -34,7 +34,7 @@ Every reusable asset should include:
 5. Add or update examples that show how the skill is used.
 6. Update the root README skill catalog.
 
-See [`docs/create-a-skill.md`](./docs/create-a-skill.md) and [`docs/review-a-skill.md`](./docs/review-a-skill.md).
+See [`docs/guides/create-a-skill.md`](./docs/guides/create-a-skill.md) and [`docs/guides/review-a-skill.md`](./docs/guides/review-a-skill.md).
 
 ## Propose an example
 
@@ -51,7 +51,7 @@ Examples should be complete enough to evaluate quickly:
 
 External repositories belong in `components/` as submodules when they have their own lifecycle. Do not copy external source into native assets. Add a sibling metadata file such as `components/<name>.metaskills.md` and declare the mode: `reference-only`, `development-companion`, or `tool-provider`.
 
-See [`docs/submodules.md`](./docs/submodules.md).
+See [`docs/reference/submodules.md`](./docs/reference/submodules.md).
 
 ## Pull request checklist
 
@@ -66,4 +66,4 @@ See [`docs/submodules.md`](./docs/submodules.md).
 
 ## Releases
 
-See [`docs/release-process.md`](./docs/release-process.md) for release guidance.
+See [`docs/guides/release-process.md`](./docs/guides/release-process.md) for release guidance.

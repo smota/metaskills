@@ -136,7 +136,7 @@ Create a benchmark plan comparing v1 and v2 of this skill.
 
 ## Interoperability and trust
 
-`metaskills` is file-based and vendor-neutral. It can support OpenAI/Codex-style coding agents, Claude, GitHub Copilot, Gemini, and other agent harnesses that can read project instructions. See [Interoperability and trust model](./docs/interoperability.md).
+`metaskills` is file-based and vendor-neutral. It can support OpenAI/Codex-style coding agents, Claude, GitHub Copilot, Gemini, and other agent harnesses that can read project instructions. See [Interoperability and trust model](./docs/reference/interoperability.md).
 
 ## What this repo is not
 
@@ -149,10 +149,10 @@ Contributions are welcome when they improve reusable skills, agents, toolsets, e
 Start with:
 
 - [Contributing guide](./CONTRIBUTING.md)
-- [Create a skill](./docs/create-a-skill.md)
-- [Review a skill](./docs/review-a-skill.md)
-- [Release process](./docs/release-process.md)
-- [GitHub discoverability checklist](./docs/github-discoverability.md)
+- [Create a skill](./docs/guides/create-a-skill.md)
+- [Review a skill](./docs/guides/review-a-skill.md)
+- [Release process](./docs/guides/release-process.md)
+- [GitHub discoverability checklist](./docs/reference/github-discoverability.md)
 
 ## Repository structure
 
@@ -167,9 +167,10 @@ docs/        Repository architecture, conventions, and workflow runbooks.
 
 ## More documentation
 
-- [Repository architecture](./docs/repository-architecture.md) — structure, asset ownership, and implementation details.
-- [Component submodule workflow](./docs/submodules.md) — how external inspiration/reference repos are linked.
-- [Interoperability and trust model](./docs/interoperability.md) — compatibility, boundaries, and safety model.
+- [Documentation index](./docs/) — adopter, builder, and contributor navigation.
+- [Repository architecture](./docs/reference/repository-architecture.md) — structure, asset ownership, and implementation details.
+- [Component submodule workflow](./docs/reference/submodules.md) — how external inspiration/reference repos are linked.
+- [Interoperability and trust model](./docs/reference/interoperability.md) — compatibility, boundaries, and safety model.
 
 ## Inspirations and references
 

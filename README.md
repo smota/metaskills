@@ -6,7 +6,7 @@
 
 Portable, installable skills for building better AI agents, workflows, and agent capabilities directly inside your own repositories.
 
-`metaskills` is for adopters who want practical, reusable agent-building workflows without adopting a new platform. Install a skill, use it in your project, and keep the generated assets in your own repo. MetaSkills 1.1 expands `agent-builder` with an agent maturity model, harness adapters, handoff contracts, subprocess/job templates, continuous improvement artifacts, and MCP/OpenAPI safety guidance.
+`metaskills` is for adopters who want practical, reusable agent-building workflows without adopting a new platform. Install a skill, use it in your project, and keep the generated assets in your own repo. MetaSkills 1.2 adds `harness-validator`, a read-only, evidence-first audit for the instructions, environment, security, work control, continuity, verification, observability, recovery, and orchestration around AI coding agents.
 
 Website: <https://movetheneedle.info/metaskills/> · Source: <https://github.com/smota/metaskills>
 
@@ -39,6 +39,7 @@ Install one or more skills:
 ```bash
 npx skills add https://github.com/smota/metaskills --skill agent-builder --full-depth
 npx skills add https://github.com/smota/metaskills --skill skill-creator --full-depth
+npx skills add https://github.com/smota/metaskills --skill harness-validator --full-depth
 ```
 
 Install without prompts by passing a target agent, for example:
@@ -55,6 +56,7 @@ Each installed skill is self-contained and includes its own `SKILL.md`, README, 
 | --- | --- | --- | --- |
 | [`agent-builder`](./skills/agent-builder/) | You want to create an agent, copilot, coding assistant, tool-enabled assistant, knowledge-focused assistant, or orchestrating agent for another project. | `agents/<agent-name>/README.md`, `AGENT.md`, maturity scorecard, runtime capabilities, tools/actions, handoff/job contracts, adapters, evals. | `npx skills add https://github.com/smota/metaskills --skill agent-builder --full-depth` |
 | [`skill-creator`](./skills/skill-creator/) | You want to turn a workflow, prompt, document, transcript, script, or existing sub-agent into an installable skill. | `skills/<skill-name>/SKILL.md`, README, templates, checklists, references, examples. | `npx skills add https://github.com/smota/metaskills --skill skill-creator --full-depth` |
+| [`harness-validator`](./skills/harness-validator/) | You want to audit whether a project gives AI coding agents a reliable, safe, observable, and recoverable working environment. | A read-only, evidence-backed maturity report with blockers, conflicts, gaps, over-detail findings, and prioritized improvements. | `npx skills add https://github.com/smota/metaskills --skill harness-validator --full-depth` |
 
 ## Examples
 
@@ -123,6 +125,29 @@ Evaluate this existing skill and suggest improvements with acceptance criteria.
 
 ```text
 Create a benchmark plan comparing v1 and v2 of this skill.
+```
+
+### [`harness-validator`](./skills/harness-validator/)
+
+Audit an AI coding-agent harness without modifying the target project.
+
+It helps:
+
+- assess nine capability categories from instructions through orchestration
+- distinguish documented claims from executable, enforced, and maintained evidence
+- surface non-averaged safety and reliability blockers
+- identify conflicts, missing capabilities, stale evidence, and over-detailed controls
+- recommend the smallest effective improvements by risk, confidence, and effort
+- produce Markdown and validated JSON reports
+
+Try prompts like:
+
+```text
+Use harness-validator to audit this repository for long-running coding-agent work. Do not edit anything.
+```
+
+```text
+Assess whether this autonomous pull-request loop has safe permissions, recoverable state, independent verification, stopping conditions, and cost budgets.
 ```
 
 ## Use in a downstream project

@@ -1,0 +1,13 @@
+{
+  "skill": "harness-validator",
+  "version": "1.0.0",
+  "cases": [
+    {"id":"activation-harness-audit","prompt":"Audit whether this repository is ready for long-running coding agents.","expected":["activate harness-validator","remain read-only","assess categories","cite evidence","prioritize improvements"],"must_not":["edit the target","require a specific harness product"],"contract_terms":["read-only","evidence-first","prioritize"]},
+    {"id":"small-project-applicability","prompt":"Validate the harness for this one-file, single-session utility.","expected":["mark loops and graphs not applicable when justified","prefer simpler alternatives","assess safety and verification"],"must_not":["require multi-agent orchestration","fail solely for missing AGENTS.md"],"contract_terms":["not_applicable","simpler alternatives","Do not require `AGENTS.md`"]},
+    {"id":"cross-component-verification","prompt":"Review a web change spanning UI, API, and database where only unit tests pass.","expected":["identify unsupported cross-boundary completion","recommend integration or E2E evidence","inspect side effects and cleanup"],"must_not":["accept unit tests as sufficient without analysis"],"contract_terms":["cross-component","E2E","side effects"]},
+    {"id":"conflicting-state-authority","prompt":"The repository progress file and issue tracker disagree about what is complete.","expected":["surface conflict","define field-level authority and reconciliation","avoid silently choosing a source"],"must_not":["silently choose one source"],"contract_terms":["authority","reconciliation","conflicts"]},
+    {"id":"unsafe-autonomous-loop","prompt":"Assess an autonomous deployment loop with production credentials and no spending limit.","expected":["report P0 blocker","check secrets and least privilege","require approval and budget gates","do not average blocker away"],"must_not":["award a passing aggregate score"],"contract_terms":["P0","least privilege","budgets","Never average away"]},
+    {"id":"over-detailed-instructions","prompt":"Review a 900-line instruction file containing duplicated and outdated rules.","expected":["test discovery and contradictions","recommend routing and deletion","avoid arbitrary line-count threshold"],"must_not":["fail solely because the file has 900 lines"],"contract_terms":["contradictory","routing","line count"]},
+    {"id":"structured-output-validation","prompt":"Produce a machine-readable harness assessment.","expected":["use assessment template","include applicability rationale and evidence state","run validator"],"must_not":["claim valid without running the validator"],"contract_terms":["assessment.json","applicability_reason","validate_assessment.py"]}
+  ]
+}

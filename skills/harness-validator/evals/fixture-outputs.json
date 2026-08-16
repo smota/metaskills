@@ -1,0 +1,9 @@
+{
+  "activation-harness-audit": "activate harness-validator; remain read-only; assess categories; cite evidence; prioritize improvements",
+  "small-project-applicability": "mark loops and graphs not applicable when justified; prefer simpler alternatives; assess safety and verification",
+  "cross-component-verification": "identify unsupported cross-boundary completion; recommend integration or E2E evidence; inspect side effects and cleanup",
+  "conflicting-state-authority": "surface conflict; define field-level authority and reconciliation; avoid silently choosing a source",
+  "unsafe-autonomous-loop": "report P0 blocker; check secrets and least privilege; require approval and budget gates; do not average blocker away",
+  "over-detailed-instructions": "test discovery and contradictions; recommend routing and deletion; avoid arbitrary line-count threshold",
+  "structured-output-validation": "use assessment template; include applicability rationale and evidence state; run validator"
+}

@@ -1,0 +1,1396 @@
+{
+  "target": "path-or-repository",
+  "commit": null,
+  "environment": null,
+  "risk_profile": "medium",
+  "evidence_confidence": "low",
+  "categories": [
+    {
+      "id": "intent-knowledge",
+      "name": "Intent, instructions, and knowledge routing",
+      "checks": [
+        {
+          "id": "IK-01",
+          "description": "Purpose, architecture, conventions, hard constraints, and verification entry points are discoverable.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "IK-02",
+          "description": "Hard requirements are distinguishable from preferences and historical notes.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "IK-03",
+          "description": "Global instructions route readers to applicable topic guidance.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "IK-04",
+          "description": "Important decisions are durable rather than chat-only.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "IK-05",
+          "description": "Duplicate, stale, contradictory, and irrelevant instructions are detected.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "IK-06",
+          "description": "A fresh session can explain, run, and verify the project.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "IK-07",
+          "description": "Local guidance is near relevant code without duplicating global rules.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    },
+    {
+      "id": "environment-initialization",
+      "name": "Tools, environment, and initialization",
+      "checks": [
+        {
+          "id": "EI-01",
+          "description": "Dependencies and runtime/tool versions are reproducible.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "EI-02",
+          "description": "Clean setup succeeds in an isolated environment.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "EI-03",
+          "description": "Standard start, test, lint, type-check, and aggregate-check commands exist.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "EI-04",
+          "description": "A passing smoke test proves the test runner works.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "EI-05",
+          "description": "Required capabilities use least privilege.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "EI-06",
+          "description": "Startup requires no undocumented repair.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "EI-07",
+          "description": "Templates or generated scaffolding are validated.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "EI-08",
+          "description": "Project initialization is distinct from per-session startup.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    },
+    {
+      "id": "security-governance",
+      "name": "Security, permissions, and governance",
+      "checks": [
+        {
+          "id": "SG-01",
+          "description": "Secrets are isolated and redacted.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SG-02",
+          "description": "Filesystem, shell, network, database, and connector permissions follow least privilege.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SG-03",
+          "description": "Issues, docs, logs, webpages, and connector data are treated as untrusted prompt-injection inputs.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SG-04",
+          "description": "Destructive operations are sandboxed, reversible, or approval-gated.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SG-05",
+          "description": "Deploying, publishing, migrating, deleting, and spending require authorization.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SG-06",
+          "description": "Privacy, retention, licensing, and dependency/tool provenance are governed.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SG-07",
+          "description": "Actions are attributable through an audit trail.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SG-08",
+          "description": "Retries cannot repeat unsafe side effects.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    },
+    {
+      "id": "scope-control",
+      "name": "Scope, task decomposition, and work control",
+      "checks": [
+        {
+          "id": "SC-01",
+          "description": "Work items have stable identity, observable behavior, state, dependencies, and executable acceptance evidence.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SC-02",
+          "description": "Active work is small enough to finish and verify.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SC-03",
+          "description": "New activation is gated unless parallel work is demonstrably isolated.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SC-04",
+          "description": "Blocked-task semantics cannot deadlock the scheduler.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SC-05",
+          "description": "Opportunistic refactoring is separate from required scope.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SC-06",
+          "description": "One authoritative work-state surface exists.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "SC-07",
+          "description": "Progress measures verified outcomes, not files or lines changed.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    },
+    {
+      "id": "continuity-authority",
+      "name": "State, continuity, and authority",
+      "checks": [
+        {
+          "id": "CA-01",
+          "description": "Completed, active, blocked, and next work persist durably.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CA-02",
+          "description": "Decisions preserve both choice and rationale.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CA-03",
+          "description": "Verification results and known failures survive sessions.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CA-04",
+          "description": "Handoff claims reconcile against Git and current command results.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CA-05",
+          "description": "A fresh session can identify an executable next action.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CA-06",
+          "description": "Concurrent writes have ownership, isolation, and merge semantics.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CA-07",
+          "description": "Repository files and external trackers have field-level authority and reconciliation rules.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CA-08",
+          "description": "Regressions or requirement changes can invalidate and reopen passing state.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CA-09",
+          "description": "Evidence is bound to commit, requirement version, environment, verifier, and timestamp.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    },
+    {
+      "id": "verification-completion",
+      "name": "Verification, completion, and test strength",
+      "checks": [
+        {
+          "id": "VC-01",
+          "description": "Every acceptance criterion maps to an assertion or reviewable evidence.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-02",
+          "description": "Static, runtime, integration, and E2E depth is selected by change risk.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-03",
+          "description": "Startup and readiness are tested.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-04",
+          "description": "Cross-component claims traverse real boundaries.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-05",
+          "description": "User-visible outcomes, side effects, partial failures, cleanup, and error propagation are checked where applicable.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-06",
+          "description": "Architectural invariants and recurring review findings become executable checks where feasible.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-07",
+          "description": "The harness or checker\u2014not worker confidence\u2014grants completion.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-08",
+          "description": "Failures explain what failed, why it matters, and likely repair direction.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-09",
+          "description": "Flakes, retries, environments, and baselined failures are visible.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "VC-10",
+          "description": "Representative tests are periodically challenged by deliberate faults or mutation testing.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    },
+    {
+      "id": "observability-evaluator",
+      "name": "Observability and evaluator quality",
+      "checks": [
+        {
+          "id": "OE-01",
+          "description": "Lifecycle, critical path, data flow, exceptions, and abnormal resource behavior are observable.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "OE-02",
+          "description": "Task traces connect scope, execution, verification, and termination.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "OE-03",
+          "description": "Logs and traces use stable diagnostic schemas.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "OE-04",
+          "description": "Evaluator rubrics cite observable evidence.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "OE-05",
+          "description": "Evaluator independence is graded across role, context, evidence source, permissions, model, and deterministic oracle.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "OE-06",
+          "description": "Evaluator disagreement or rationalization is inspectable.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "OE-07",
+          "description": "Signals optimize diagnostic value rather than volume.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "OE-08",
+          "description": "Sensitive data is redacted.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    },
+    {
+      "id": "clean-recovery",
+      "name": "Clean state, maintenance, and recovery",
+      "checks": [
+        {
+          "id": "CR-01",
+          "description": "Applicable checks pass at handoff, or exceptions are explicitly baselined.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-02",
+          "description": "Progress and evidence match repository state.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-03",
+          "description": "Debug and temporary artifacts are absent or intentionally retained.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-04",
+          "description": "Standard startup still works.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-05",
+          "description": "Cleanup and retry operations are idempotent.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-06",
+          "description": "Rollback, backup, partial-failure repair, and disaster recovery match project risk.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-07",
+          "description": "Harness artifacts have owners and update triggers.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-08",
+          "description": "Exceptions have owner, reason, expiry, and no-regression conditions.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-09",
+          "description": "Harness components are periodically benchmarked, simplified, or removed.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "CR-10",
+          "description": "Stale guidance is treated as riskier than explicit absence.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    },
+    {
+      "id": "autonomy-economics",
+      "name": "Autonomy, orchestration, and economics",
+      "checks": [
+        {
+          "id": "AE-01",
+          "description": "Autonomous loops have a goal, verifier, and stopping condition.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-02",
+          "description": "Time, turns, tokens, cost, concurrency, and external-call budgets are bounded.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-03",
+          "description": "Loop type matches the task: turn, goal, schedule, or event.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-04",
+          "description": "Parallel work uses isolated workspaces and collision-free state.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-05",
+          "description": "Graphs are used only when branching, rollback, parallelism, approvals, or valuable intermediate state justify them.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-06",
+          "description": "Node roles, routing, rollback, shared-state schema, and merge semantics are explicit.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-07",
+          "description": "Graph documentation matches executable routing.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-08",
+          "description": "Metrics are anchored to outcomes, ground truth, or human spot checks.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-09",
+          "description": "Human review capacity and code comprehension are monitored.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-10",
+          "description": "Cheap deterministic checks precede expensive model evaluation.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        },
+        {
+          "id": "AE-11",
+          "description": "Orchestration demonstrates measured value over a simpler alternative.",
+          "applicability": "recommended",
+          "applicability_reason": "Confirm applicability from project risk and context.",
+          "evidence_state": "unknown",
+          "maturity": 0,
+          "confidence": "low",
+          "risk": {
+            "impact": 3,
+            "likelihood": 3
+          },
+          "effort": "small",
+          "evidence": [],
+          "recommendation": "Assess this capability and implement the smallest effective improvement if needed.",
+          "exception": null
+        }
+      ]
+    }
+  ],
+  "blockers": [],
+  "conflicts": [],
+  "gaps": [],
+  "over_detailed_controls": [],
+  "recommendations": [],
+  "not_applicable": [],
+  "commands": []
+}

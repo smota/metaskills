@@ -25,3 +25,4 @@ skills/<skill-name>/
 
 - [`agent-builder`](../../skills/agent-builder/)
 - [`skill-creator`](../../skills/skill-creator/)
+- [`harness-validator`](../../skills/harness-validator/) — performs read-only, evidence-first audits of agent harness reliability, safety, continuity, verification, and orchestration.

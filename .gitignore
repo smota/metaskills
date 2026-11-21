@@ -2,3 +2,5 @@
 .pi/
 .pi-subagents/
 graphify-out/
+/.agentflow/transactions/
+/.agent-runs/

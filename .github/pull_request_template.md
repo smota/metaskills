@@ -1,27 +1,42 @@
 ## Summary
 
-Describe what this PR changes and why it helps downstream projects build or improve agents, skills, or tool-assisted workflows.
+<!-- Why this change, and what it changes -->
 
-## Type of change
+## Implemented issues
 
-- [ ] Skill
-- [ ] Agent
-- [ ] Toolset
-- [ ] Component/submodule
-- [ ] Example
-- [ ] Documentation
-- [ ] Website/public-facing copy
+Closes #<issue-number>
 
-## Checklist
+## Related issues
 
-- [ ] Purpose and intended downstream use are documented.
-- [ ] Prerequisites and dependencies are documented.
-- [ ] Usage examples are included or updated.
-- [ ] Inputs, outputs, and success criteria are clear where applicable.
-- [ ] Templates/supporting files are colocated with the owning asset.
-- [ ] No secrets, credentials, private URLs, or production data are included.
-- [ ] Validation was performed or marked not applicable.
+<!-- `Refs #<n>` for non-closing references, or `none` -->
 
-## Validation
+## Workflow evidence
 
-List commands run, manual checks, or reason validation is not applicable.
+- Workflow-status comment: <issue comment URL>
+- Handover comments: <URL> | exception: <reason>
+- Role-pass summary: <passes completed, for example developer, tester, reviewer>
+- Validation evidence: <where the test output is recorded>
+
+## Agent review
+
+- Implemented by: <registered platform slug>
+- Launcher: <registered platform slug>
+- Executor: <execution target, for example codex-cli>
+- Transport: local-cli | provider-api | pi-subagent | intercom-session | orchestrated-worktree | manual
+- Delegation boundary: current-session | child-subagent | separate-local-session | child-worktree | human-handoff
+- Model / runtime: <model identifier>
+- Reviewed by: <registered platform slug>
+- Independent reviewer: YES | NO
+- Review: self-review | human-review-requested | human-reviewed
+- Workflow profile: bounded | standard | high-assurance
+- Merge owner: human/operator
+- Mode: single-agent | multi-agent
+
+## CI-equivalent validation
+
+- Status: passed | not-run-with-reason | expected-fail-with-follow-up
+- Commands: `python -B -m unittest discover -s tests -v`, `python -B skills/harness-validator/scripts/validate_assessment.py skills/harness-validator/templates/assessment.json`, `python -B skills/harness-validator/scripts/run_evals.py skills/harness-validator`
+
+## Follow-up issues
+
+<!-- `#<n>` for each follow-up, or `none` -->

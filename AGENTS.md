@@ -82,3 +82,13 @@ After changing files:
 1. Summarize what changed.
 2. List any validation performed.
 3. Call out follow-up work or gaps.
+
+## How work enters this repo
+
+- The backlog is GitHub Issues on `smota/metaskills`.
+- Use one issue, one `work/<slug>` branch, and one PR with `Closes #<n>`.
+- The trunk and PR target are `main`.
+- Run AgentFlow `bounded` role passes with one agent by default. Disclose self-review.
+- Before the PR, run every command in `ciCommands` in `agent-workflow.config.json`.
+- Samuel merges with squash.
+- Use Meshloop only when the user names it.
